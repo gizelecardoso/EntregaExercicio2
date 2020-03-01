@@ -1,5 +1,5 @@
 
-public class José extends Pessoas {
+public class Jose extends Pessoas {
 
 	@Override
 	public void assinar(Entregavel e) {

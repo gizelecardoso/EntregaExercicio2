@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.EmptyStackException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class Editora implements Subject{
 	}
 
 	@Override
-	public void notifyObserver() {
+	public void notifyObserver() throws Exception {
 		
 		List<Observer> aux = new ArrayList<>();
 		
@@ -34,13 +35,13 @@ public class Editora implements Subject{
 		observers.addAll(aux);
 		
 		if(aux.isEmpty()) {
-			System.out.println("Falimos !!!!!!!");
+			throw new Exception("Falimos!!!!!!");
 		}
 
 		
 	}
 	
-	public void iniciar() {
+	public void iniciar() throws Exception {
 		
 		while(true) {
 		
@@ -51,9 +52,7 @@ public class Editora implements Subject{
 				c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
 				entregavel.setConteudo("FINAIS DE SEMANA");
 				notifyObserver();
-				
-				
-				
+
 			}
 			
 			if(c.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY ||

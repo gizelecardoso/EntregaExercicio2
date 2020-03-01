@@ -1,9 +1,9 @@
 
-public class João extends Pessoas {
+public class Joao extends Pessoas {
 
 	@Override
 	public void assinar(Entregavel e) {
-		if(e.getConteudo() == "FINAL DE SEMANA") {
+		if(e.getConteudo() == "FINAIS DE SEMANA") {
 			System.out.println("Assinante aos Finais de Semana");
 		}
 			

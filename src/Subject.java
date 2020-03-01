@@ -2,6 +2,6 @@
 public interface Subject {
 
 	public void addObserver(Observer o);
-	public void notifyObserver();
+	public void notifyObserver() throws Exception;
 
 }
